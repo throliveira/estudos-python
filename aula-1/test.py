@@ -1,0 +1,1 @@
+print("Ambiente python configurado com sucesso!")
