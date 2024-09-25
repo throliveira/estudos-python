@@ -8,3 +8,4 @@ linguagens.append("C++")
 linguagens.remove("javascript")
 #Exiba o total de itens na lista.
 print(linguagens)
+print(len(linguagens))
