@@ -13,11 +13,21 @@ def soma(a,b):
 print(soma(10,16))
 #Função de contagem:
 #Crie uma função que receba um número e exiba a contagem de 0 até o número fornecido.
-def cont(x):
-    a = 0
-    while a > cont(x):
-        a += 1
-cont(5)
-print(a)
+def contagem(x):
+    for i in range (x + 1):
+        print(i)
+
+contagem(10)
+
 #Escopo Global e Local:
 #Crie duas variáveis globais e use-as em uma função, mas dentro da função, defina variáveis locais com o mesmo nome e exiba a diferença entre os dois escopos.
+a = 10
+b = 11
+
+def imprimir():
+    a = 2
+    b = 3
+    print(a,b)
+
+imprimir()
+print(a,b)
