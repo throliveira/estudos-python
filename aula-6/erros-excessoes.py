@@ -24,3 +24,16 @@ finally:
     print("Hora de dar tchau!")
 #Exceção personalizada:
 #Crie uma função que simule a compra de um item, levantando uma exceção se o saldo for insuficiente.
+class SaldoInsuficienteError(Exception):
+    pass
+def comprar_item(nome_item, preco_item, saldo_atual):
+    if saldo_atual < preco_item:
+        raise SaldoInsuficienteError("Saldo insuficiente para comprar o item!")
+    else:
+        print(f"Compra de {nome_item} realizada com sucesso!")
+        print(f"Saldo atual: {saldo_atual - preco_item:.2f}")
+
+try:
+    comprar_item("laptop", 2000.0, 3000.0)
+except SaldoInsuficienteError as e:
+    print(f"Erro: {e}")
